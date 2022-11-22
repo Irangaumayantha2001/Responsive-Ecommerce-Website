@@ -8,17 +8,17 @@
   --font-bold: 700;
 }
 
-/*===== Colores =====*/
+/*===== Colors =====*/
 :root {
   --second-color: #E55947;
   --second-color-alt: #D2321E;
   --white-color: #FAFAFF;
   --dark-color: #101010;
   --dark-color-light: #606060;
-  --gray-color: #F0F1F3;
+  --gray-color: #c0c0c0;
 }
 
-/*===== Fuente y tipografia =====*/
+/*===== Fluent y tipografia =====*/
 :root {
   --body-font: 'Open Sans', sans-serif;
   --big-font-size: 3rem;
@@ -28,7 +28,7 @@
   --small-font-size: .75rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   :root {
     --big-font-size: 6rem;
     --h1-font-size: 2.25rem;
@@ -38,7 +38,7 @@
   }
 }
 
-/*===== Margenes =====*/
+/*===== Margin =====*/
 :root {
   --mb-1: 0.5rem;
   --mb-2: 1rem;
@@ -90,16 +90,100 @@ img {
 }
 
 /*===== CLASS CSS ===== */
+.section{
+    padding: 3rem;
+}
+
+.section-title{
+    font-size: var(--h2-font-size);
+    color: var(--dark-color);
+    margin: var(--mb-4);
+    text-align: center;
+
+}
+
+.section-all{
+    display: block;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi);
+    color: var(--dark-color-light);
+    text-align: center;
+    margin-bottom: var(--mb-2);
+}
 
 
 /*===== LAYOUT =====*/
+.bd-grid{
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap:2rem;
+    width: calc(100%);
+    margin-left: var(--mb-3);
+    margin-right: var(--mb-3);
+}
 
+.l-header{
+    width: 100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--gray-color);
+}
 
 /*===== NAV =====*/
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
+@media screen and (max-width: 768px) {
+    .nav_menu{
+        position: fixed;
+        top: var(--header-height);
+        right: -100%;
+        width: 80%;
+        height: 100%;
+        padding: 2rem ;
+        background-color: var(--white-color);
+        transition: .5s;
+    }
+  }
+
+ .nav-item{
+  margin-bottom: var(--mb-4);
+ } 
+
+ .nav_link{
+  color: var(--dark-color);
+  font-weight: var(--font-semi);
+ }
+
+ .nav_link:hover{
+  color: var(--first-color);
+ }
+
+ .nav_logo{
+  font-weight: var(--font-bold);
+ }
+
+ .nav_cart{
+  font-size: 1.5rem;
+  margin-right: var(--mb-2);
+ }
+
+ .nav_toggle{
+  font-size: 1.5rem;
+cursor: pointer;
+ }
 /*=== Show menu ===*/
-
+.show{
+  right: 0;
+}
 
 /*===== HOME =====*/
 
@@ -129,5 +213,4 @@ img {
 
 
 /* ===== MEDIA QUERIES=====*/
-
 
